@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=Lexend+Deca:wght@400;500&family=Montserrat:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+:root {
+  --primary-color: #1e2140;
+  --secondary-color: #151932;
+  --main-color: var(--color-1);
+  --color-1: #f87070;
+  --color-2: #6ff3f8;
+  --color-3: #da81f9;
+  --color-4: #d8e1fe;
+  --main-font: var(--font-1);
+  --font-1: "Lexend Deca", sans-serif;
+  --font-2: "Montserrat", sans-serif;
+  --font-3: "Comfortaa", cursive;
+}
+
+body {
+  background-color: var(--primary-color);
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  font-family: var(--main-font);
+}
+
+.title {
+  color: white;
+  font-weight: 500;
+  color: var(--color-4);
+}
+
+.bar {
+  background-color: var(--secondary-color);
+  width: 35vw;
+  height: 70px;
+  display: flex;
+  border-radius: 100px;
+  position: relative;
+}
+.part {
+  width: 12vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-4);
+  color: #848ca6;
+  font-weight: 500;
+  z-index: 1;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.active {
+  color: var(--secondary-color);
+  letter-spacing: 0.5px;
+}
+.active-part {
+  transition: 0.5s;
+  width: 10.5vw;
+  height: 55px;
+  background-color: var(--main-color);
+  position: absolute;
+  border-radius: 100px;
+  top: 7.5px;
+  left: 0.5vw;
+}
+.timer-box {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -24px -12px 71px #262a57;
+}
+.time-bar {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: conic-gradient(var(--main-color) 360deg, transparent 0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.time {
+  color: #fff;
+  background-color: var(--secondary-color);
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.5rem;
+  cursor: pointer;
+}
+.timer-state {
+  position: absolute;
+  bottom: 60px;
+  color: white;
+  letter-spacing: 10px;
+  font: inherit;
+  cursor: pointer;
+  pointer-events: none;
+}
+.setting-icon i {
+  color: var(--color-4);
+  font-size: 20px;
+  cursor: pointer;
+}
+.setting-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 30px;
+}
+.settings {
+  background-color: #fff;
+  width: 40vw;
+  height: 440px;
+  overflow: hidden;
+}
+.settings header {
+  padding: 25px 20px 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid rgb(225 217 217);
+}
+.settings header p,
+.quit {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+.quit {
+  cursor: pointer;
+}
+
+.settings main {
+  padding: 20px;
+}
+.time-change,
+.font-change {
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgb(225 217 217);
+}
+.font-1 {
+  font-family: var(--font-1) !important;
+}
+.font-2 {
+  font-family: var(--font-2) !important;
+}
+.font-3 {
+  font-family: var(--font-3) !important;
+}
+.settings .heading {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.labels {
+  margin-top: 15px;
+  display: flex;
+  gap: 8vw;
+  font-weight: 500;
+  color: rgb(151 151 151);
+  font-size: 0.9rem;
+}
+.inputs {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 3vw;
+}
+.inputs div {
+  width: 11vw;
+  height: 50px;
+  background-color: rgb(230 230 230);
+  border-radius: 10px;
+  padding: 0 15px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: inherit;
+  overflow: hidden;
+}
+.carets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+.font-change,
+.color-change {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.choices {
+  display: flex;
+  gap: 2vw;
+}
+.fonts p {
+  background-color: #eae5e5;
+  color: rgb(97, 95, 95);
+}
+.choices span,
+.choices p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.active-font {
+  background-color: black !important;
+  color: white !important;
+}
+.colors span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.color-1 {
+  background-color: var(--main-color);
+}
+.color-2 {
+  background-color: var(--color-2);
+}
+.color-3 {
+  background-color: var(--color-3);
+}
+.none {
+  display: none;
+}
+.colors img {
+  height: 20px;
+}
+.active-color img {
+  display: block !important;
+}
+.value {
+  outline: none;
+  width: 8vw;
+}
+.value:focus {
+  outline: none;
+}
+.settings footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apply-btn {
+  background-color: var(--main-color);
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 40vw;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}

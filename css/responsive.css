@@ -1,0 +1,88 @@
+@media (max-width: 768px) {
+  body {
+    margin-top: 10%;
+  }
+  .timer-box {
+    width: 300px;
+    height: 300px;
+  }
+  .time-bar {
+    width: 260px;
+    height: 260px;
+  }
+  .time {
+    width: 235px;
+    height: 235px;
+    font-size: 3.7rem;
+  }
+  .bar {
+    width: 90vw;
+  }
+  .part {
+    width: 30vw;
+    font-size: 0.75rem;
+  }
+  .active-part {
+    width: 26vw;
+    left: 2vw;
+  }
+  .settings {
+    width: 95vw;
+  }
+  .setting-modal {
+    overflow: hidden;
+  }
+  .settings header {
+    padding: 25px 38px 12px 20px;
+  }
+  .settings main {
+    padding: 20px 12px;
+  }
+  .labels {
+    gap: 13vw;
+    font-size: 0.75rem;
+  }
+  .inputs {
+    justify-content: unset;
+    gap: 5vw;
+  }
+  .inputs div {
+    width: 25vw;
+    justify-content: space-between;
+  }
+  .font-change,
+  .color-change {
+    padding-right: 5vw;
+  }
+  .apply-btn {
+    width: 100vw;
+  }
+}
+
+@media (500px <= width <= 768px) {
+  .part {
+    font-size: 0.9rem;
+  }
+  .bar {
+    width: 88vw;
+  }
+  .inputs {
+    gap: 7vw;
+  }
+  .labels {
+    gap: 20vw;
+    font-size: 0.9rem;
+  }
+}
+
+@media (769px <= width <= 1100px) {
+  .bar {
+    width: 60vw;
+  }
+  .part {
+    width: 30vw;
+  }
+  .active-part {
+    width: 18vw;
+  }
+}

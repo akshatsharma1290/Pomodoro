@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <dialog class="setting-modal">
+      <div class="settings">
+        <header>
+          <p>Settings</p>
+          <i class="fa-solid fa-xmark quit"></i>
+        </header>
+        <main>
+          <div class="time-change">
+            <p class="heading">Time (minutes)</p>
+            <div class="labels">
+              <p>pomodoro</p>
+              <p>short break</p>
+              <p>long break</p>
+            </div>
+            <div class="inputs">
+              <div class="inp-1">
+                <p class="value" contenteditable="true">25</p>
+                <span class="carets">
+                  <i
+                    class="fa-solid fa-caret-up"
+                    data-caret="0"
+                    data-task="up"
+                  ></i>
+                  <i
+                    class="fa-solid fa-caret-down"
+                    data-caret="0"
+                    data-task="down"
+                  ></i>
+                </span>
+              </div>
+              <div class="inp-2">
+                <p class="value" contenteditable="true">5</p>
+                <span class="carets">
+                  <i
+                    class="fa-solid fa-caret-up"
+                    data-caret="1"
+                    data-task="up"
+                  ></i>
+                  <i
+                    class="fa-solid fa-caret-down"
+                    data-caret="1"
+                    data-task="down"
+                  ></i>
+                </span>
+              </div>
+              <div class="inp-3">
+                <p class="value" contenteditable="true">15</p>
+                <span class="carets">
+                  <i
+                    class="fa-solid fa-caret-up"
+                    data-caret="2"
+                    data-task="up"
+                  ></i>
+                  <i
+                    class="fa-solid fa-caret-down"
+                    data-caret="2"
+                    data-taks="down"
+                  ></i>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="font-change">
+            <p class="heading">font</p>
+            <div class="choices fonts">
+              <p class="font-1 active-font" data-font="1">Aa</p>
+              <p class="font-2" data-font="2">Aa</p>
+              <p class="font-3" data-font="3">Aa</p>
+            </div>
+          </div>
+          <div class="color-change">
+            <p class="heading">color</p>
+            <div class="choices colors">
+              <span class="color-1 active-color" data-color="1">
+                <img class="none" src="check.png" alt="check-img" />
+              </span>
+              <span class="color-2" data-color="2">
+                <img class="none" src="check.png" alt="check-img" />
+              </span>
+              <span class="color-3" data-color="3">
+                <img class="none" src="check.png" alt="check-img" />
+              </span>
+            </div>
+          </div>
+        </main>
+        <footer>
+          <div class="apply-btn">Apply</div>
+        </footer>
+      </div>
+    </dialog>
+
+    <header>
+      <h1 class="title">pomodoro</h1>
+    </header>
+
+    <div class="bar">
+      <div class="part-1 part active" data-mode="pomodoro" data-part="1">
+        pomodoro
+      </div>
+      <div class="part-2 part" data-mode="short break" data-part="2">
+        short break
+      </div>
+      <div class="part-3 part" data-mode="long break" data-part="3">
+        long break
+      </div>
+      <div class="active-part"></div>
+    </div>
+    <main>
+      <div class="timer-box">
+        <div class="time-bar">
+          <div class="time">
+            <span class="minute"></span>: <span class="zero"></span
+            ><span class="seconds">00</span>
+          </div>
+          <p class="timer-state">START</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="setting-icon"><i class="fa-solid fa-gear"></i></div>
+    </footer>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
