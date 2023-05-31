@@ -173,9 +173,7 @@ function timerRun() {
                 state = ""
                 setDefault()
                 timerAlarm.play()
-                setTimeout(() => {
-                    alert("Your Timer has been completed")
-                }, 100);
+
             } else if (seconds.textContent == "0") {
                 zero.textContent = ""
                 seconds.textContent = 59
